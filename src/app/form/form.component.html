@@ -2,14 +2,16 @@
 
   <section *ngFor="let item of phone; let i=index">
 
-    <input type="tel" matInput placeholder="555-555-1234" name="phoneNumber{{i}}" ngModel>
+    <input type="tel" matInput placeholder="555-555-1234" name="phoneNumber{{i}}" ngModel>&nbsp;
 
-    <button class="btn btn-success" (click)="addNumber()">Add Another Phone Number</button>
+    <br><br>
+
     <div *ngIf="i>0">
-    <button class="btn btn-success" (click)="removeNumber(i)">Remove Phone Number</button>
+    <button class="btn btn-danger" (click)="removeNumber(i)">Remove Phone Number</button><br><br>
    </div>
 
 </section>
+<button class="btn btn-success" (click)="addNumber()">Add Another Phone Number</button><br><br>
   <button class="btn btn-success">Submit</button>
 
 
